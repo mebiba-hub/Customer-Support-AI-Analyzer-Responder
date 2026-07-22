@@ -1,0 +1,42 @@
+[
+  {
+    "id_zgloszenia": "ZGL-001",
+    "klient": "Marta Kowalska",
+    "tresc": "Paczka dotarła do mnie całkowicie zniszczona! Pudełko jest zgniecione, a zawartość uszkodzona. Żądam natychmiastowego zwrotu pieniędzy!"
+  },
+  {
+    "id_zgloszenia": "ZGL-002",
+    "klient": "Piotr Nowak",
+    "tresc": "Dzień dobry, chciałbym zapytać czy myszka z zamówienia #4412 posiada podświetlenie RGB? Nie mogę znaleźć tej informacji w opisie."
+  },
+  {
+    "id_zgloszenia": "ZGL-003",
+    "klient": "Tomasz Wiśniewski",
+    "tresc": "Chciałem tylko podziękować za przemiłą obsługę wczoraj na czacie. Pan z infolinii pomógł mi dobrać idealny monitor!"
+  },
+  {
+    "id_zgloszenia": "ZGL-004",
+    "klient": "Katarzyna Zielińska",
+    "tresc": "Czekam na przesyłkę już 7 dni, a na stronie jest napisane 'wysyłka w 24h'. Kurier nawet do mnie nie zadzwonił. Kiedy w końcu to dostanę?!"
+  },
+  {
+    "id_zgloszenia": "ZGL-005",
+    "klient": "Michał Lewandowski",
+    "tresc": "Kupiony u Was laptop nie włącza się. Po podłączeniu do ładowarki słychać tylko dziwne ciche piszczenie. Co mam teraz zrobić?"
+  },
+  {
+    "id_zgloszenia": "ZGL-006",
+    "klient": "Anna Szymańska",
+    "tresc": "Dzień dobry, czy jest możliwość wystawienia faktury VAT na firmę po dokonaniu zakupu na osobę prywatną? Pomiędzy zakupem a dziś minęły 3 dni."
+  },
+  {
+    "id_zgloszenia": "ZGL-007",
+    "klient": "Grzegorz Wójcik",
+    "tresc": "Przyszła do mnie zupełnie inna klawiatura niż ta, którą zamawiałem. Zamawiałem wersję bezprzewodową, a dostałem z kablem."
+  },
+  {
+    "id_zgloszenia": "ZGL-008",
+    "klient": "Adam Kamiński",
+    "tresc": "Chciałem zapytać, czy planujecie promocję na procesory z serii Intel i9 w najbliższym miesiącu? Zastanawiam się czy czekać z zakupem."
+  }
+]

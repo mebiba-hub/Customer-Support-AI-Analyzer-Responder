@@ -1,0 +1,66 @@
+[
+    {
+        "id_zgloszenia": "ZGL-001",
+        "klient": "Marta Kowalska",
+        "kategoria": "Uszkodzony sprzęt",
+        "priorytet": "Wysoki",
+        "sentyment": "Negatywny",
+        "sugerowana_odpowiedz": "Pani Marto, bardzo przepraszamy za zaistniałą sytuację. Prosimy o przesłanie zdjęć uszkodzeń oraz protokołu szkody spisanego z kurierem na nasz adres e-mail. Niezwłocznie zlecimy zwrot środków lub wyślemy nowy towar."
+    },
+    {
+        "id_zgloszenia": "ZGL-002",
+        "klient": "Piotr Nowak",
+        "kategoria": "Pytanie o produkt",
+        "priorytet": "Niski",
+        "sentyment": "Neutralny",
+        "sugerowana_odpowiedz": "Panie Piotrze, dziękujemy za kontakt. Myszka z zamówienia #4412 posiada pełne podświetlenie RGB, którego ustawienia można personalizować za pomocą dedykowanego oprogramowania. W razie dalszych pytań jesteśmy do dyspozycji."
+    },
+    {
+        "id_zgloszenia": "ZGL-003",
+        "klient": "Tomasz Wiśniewski",
+        "kategoria": "Pochwała",
+        "priorytet": "Niski",
+        "sentyment": "Pozytywny",
+        "sugerowana_odpowiedz": "Panie Tomaszu, ogromnie dziękujemy za miłe słowa! Przekażemy podziękowania naszemu konsultantowi z infolinii. Cieszymy się, że nowy monitor spełnia Pana oczekiwania!"
+    },
+    {
+        "id_zgloszenia": "ZGL-004",
+        "klient": "Katarzyna Zielińska",
+        "kategoria": "Dostawa",
+        "priorytet": "Wysoki",
+        "sentyment": "Negatywny",
+        "sugerowana_odpowiedz": "Pani Katarzyno, najmocniej przepraszamy za tak duże opóźnienie w dostawie. Natychmiast kontaktujemy się z firmą kurierską w celu ustalenia statusu przesyłki i skontaktujemy się z Panią telefonicznie w ciągu godziny."
+    },
+    {
+        "id_zgloszenia": "ZGL-005",
+        "klient": "Michał Lewandowski",
+        "kategoria": "Uszkodzony sprzęt",
+        "priorytet": "Wysoki",
+        "sentyment": "Negatywny",
+        "sugerowana_odpowiedz": "Panie Michale, bardzo przepraszamy za niedogodności. Opisany problem wskazuje na usterkę techniczną. Prosimy o zgłoszenie reklamacji poprzez nasz formularz online – niezwłocznie zlecimy kuriera po odbiór niesprawnego sprzętu."
+    },
+    {
+        "id_zgloszenia": "ZGL-006",
+        "klient": "Anna Szymańska",
+        "kategoria": "Faktury i płatności",
+        "priorytet": "Średni",
+        "sentyment": "Neutralny",
+        "sugerowana_odpowiedz": "Pani Anno, istnieje możliwość wystawienia faktury VAT, pod warunkiem, że na paragonie został podany numer NIP Państwa firmy. Prosimy o przesłanie danych do faktury wraz z numerem zamówienia na adres bok@naszsklep.pl."
+    },
+    {
+        "id_zgloszenia": "ZGL-007",
+        "klient": "Grzegorz Wójcik",
+        "kategoria": "Dostawa",
+        "priorytet": "Wysoki",
+        "sentyment": "Negatywny",
+        "sugerowana_odpowiedz": "Panie Grzegorzu, najmocniej przepraszamy za pomyłkę przy pakowaniu zamówienia. Zleciliśmy już kuriera po odbiór błędnej klawiatury i jednocześnie nadaliśmy do Pana prawidłowy model bezprzewodowy. Szczegóły wysłaliśmy mailowo."
+    },
+    {
+        "id_zgloszenia": "ZGL-008",
+        "klient": "Adam Kamiński",
+        "kategoria": "Pytanie o produkt",
+        "priorytet": "Niski",
+        "sentyment": "Neutralny",
+        "sugerowana_odpowiedz": "Panie Adamie, dziękujemy za zapytanie. Nie możemy zdradzać planów promocyjnych z wyprzedzeniem, ale zachęcamy do zapisania się do naszego newslettera, gdzie w pierwszej kolejności informujemy o wszystkich obniżkach cenowych."
+    }
+]
