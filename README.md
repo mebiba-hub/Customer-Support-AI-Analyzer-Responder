@@ -1,4 +1,4 @@
-# 🤖 Customer Support AI Analyzer & Responder
+#  Customer Support AI Analyzer & Responder
 
 Automatyczny system napisany w języku Python, służący do analizy, kategoryzacji oraz priorytetyzacji zgłoszeń klientów w e-commerce przy użyciu **Google Gemini API**.
 
@@ -6,7 +6,7 @@ Projekt pobiera surowe zgłoszenia w formacie JSON, analizuje je pod kątem emoc
 
 ---
 
-## 🚀 Główne funkcje
+##  Główne funkcje
 
 * **Automatyczna kategoryzacja:** Klasyfikacja zgłoszeń na kategorie (np. *Dostawa*, *Uszkodzony sprzęt*, *Pytanie o produkt*, *Pochwała*, *Rozliczenia*).
 * **Analiza sentymentu:** Określanie wydźwięku wypowiedzi klienta (*Pozytywny*, *Neutralny*, *Negatywny*).
@@ -16,7 +16,7 @@ Projekt pobiera surowe zgłoszenia w formacie JSON, analizuje je pod kątem emoc
 
 ---
 
-## 🛠️ Technologie
+##  Technologie
 
 * **Python 3.x**
 * **Google GenAI SDK** (`google-genai`)
@@ -24,17 +24,17 @@ Projekt pobiera surowe zgłoszenia w formacie JSON, analizuje je pod kątem emoc
 
 ---
 
-## 📂 Struktura projektu
+##  Struktura projektu
 
-* 📄 **`main.py`** — Główny skrypt logiczny przetwarzający dane z Gemini API
-* 📄 **`zgloszenia_raw.json`** — Surowe dane wejściowe ze zgłoszeniami
-* 📄 **`raport_zgloszen.json`** — Wygenerowany raport wyjściowy z analizą AI
-* 📄 **`requirements.txt`** — Lista wymaganych bibliotek Pythona
-* 📄 **`README.md`** — Dokumentacja projektu
+*  **`main.py`** — Główny skrypt logiczny przetwarzający dane z Gemini API
+*  **`zgloszenia_raw.json`** — Surowe dane wejściowe ze zgłoszeniami
+*  **`raport_zgloszen.json`** — Wygenerowany raport wyjściowy z analizą AI
+*  **`requirements.txt`** — Lista wymaganych bibliotek Pythona
+*  **`README.md`** — Dokumentacja projektu
 
 ---
 
-## 💻 Jak uruchomić projekt?
+##  Jak uruchomić projekt?
 
 ```bash
 # 1. Klonowanie repozytorium
