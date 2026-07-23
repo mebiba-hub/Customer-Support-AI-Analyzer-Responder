@@ -2,10 +2,23 @@ from google import genai
 import json
 import os
 
-client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
+API_KEY = os.environ.get("GEMINI_API_KEY")
 
-with open("zgloszenia_raw.json", 'r', encoding='utf-8') as f:
-    data = json.load(f)
+if not API_KEY:
+    print("BŁĄD: Brak klucza GEMINI_API_KEY w zmiennych środowiskowych!")
+    exit()
+
+client = genai.Client(api_key=API_KEY)
+
+try:
+    with open("zgloszenia_raw.json", "r", encoding="utf-8") as f:
+        data = json.load(f)
+except FileNotFoundError:
+    print("BŁĄD: Plik 'zgloszenia_raw.json' nie istnieje")
+    exit()
+except json.JSONDecodeError:
+    print("BŁĄD: Plik 'zgloszenia_raw.json' zawiera błędny format JSON")
+    exit()
 
 prompt = f'''
 Jesteś analitykiem danych przeanalizuj mi poniższy plik i stworz nowy plik json z kluczami:
@@ -16,15 +29,22 @@ Jesteś analitykiem danych przeanalizuj mi poniższy plik i stworz nowy plik jso
 plik:{data}
 '''
 
-response = client.models.generate_content(
-    model='gemini-3.5-flash',
-    contents=prompt,
-    config={
-            "response_mime_type": "application/json"
-            }
-)
+try:
+    print("🤖 Wysyłanie zapytań do Gemini API (to może chwilę potrwać)...")
+    response = client.models.generate_content(
+        model='gemini-2.0-flash',
+        contents=prompt,
+        config={"response_mime_type": "application/json"}
+    )
 
-raport = json.loads(response.text)
+    raport = json.loads(response.text)
 
-with open("raport_zgloszen.json", 'w', encoding='utf-8') as f:
-    json.dump(raport, f, ensure_ascii=False, indent=4)
+except Exception as e:
+    print(f"Coś poszło nie tak podczas generowania raportu: {e}")
+    exit()
+
+try:
+    with open("raport_zgloszen.json", "w", encoding="utf-8") as f:
+        json.dump(raport, f, ensure_ascii=False, indent=4)
+except Exception as e:
+    print(f"Błąd podczas zapisu do pliku: {e}")
