@@ -21,8 +21,8 @@ Projekt pobiera surowe zgłoszenia w formacie JSON, analizuje je pod kątem emoc
 
 * **Python 3.x**
 * **Google GenAI SDK** (`google-genai`)
-* **Pydantic** (Walidacja i strukturyzacja danych)
-* **python-dotenv** (Zarządzanie zmiennymi środowiskowymi)
+* **Pydantic** 
+* **python-dotenv** 
 
 ---
 
