@@ -1,6 +1,10 @@
+from pydantic import BaseModel, Field
+from dotenv import load_dotenv
 from google import genai
 import json
 import os
+
+load_dotenv()
 
 API_KEY = os.environ.get("GEMINI_API_KEY")
 
@@ -20,24 +24,31 @@ except json.JSONDecodeError:
     print("BŁĄD: Plik 'zgloszenia_raw.json' zawiera błędny format JSON")
     exit()
 
-prompt = f'''
-Jesteś analitykiem danych przeanalizuj mi poniższy plik i stworz nowy plik json z kluczami:
-'id_zgloszenia', 'klient' (imie i nazwisko), 'kategoria' (np. "Dostawa", "Uszkodzony sprzęt", "Pytanie o produkt", "Pochwała"),
-'priorytet' ("Niski", "Średni", "Wysoki"),
-'sentyment' ("Pozytywny", "Neutralny", "Negatywny"),
-'sugerowana_odpowiedz' (krótka, profesjonalna odpowiedź dla klienta wygenerowana przez AI)
-plik:{data}
-'''
+class ZgloszenieAnaliza(BaseModel):
+    id_zgloszenie: str = Field(description="ID zgłoszenia np. ZGL-001")
+    klient: str = Field(description="Imię i Nazwisko klienta")
+    kategoria: str = Field(description="Kategoria zgloszenia np. Uszkodzony sprzet, Pytanie o produkt")
+    priorytet: str = Field(description="Priorytet: niski, sredni, wysoki")
+    sentyment: str = Field(description="Sentyment: pozytywny, negatywny, neutralny")
+    sugerowana_odpowiedz: str = Field(description="Sugerowana profesionalna odpowiedz AI")
+
+class RaportZgloszen(BaseModel):
+    zgloszenia: list[ZgloszenieAnaliza]
+
+prompt = f"Jesteć analitykiem danych, przeanalizuj te dane {data}"
 
 try:
-    print("🤖 Wysyłanie zapytań do Gemini API (to może chwilę potrwać)...")
+    print("Wysyłanie zapytań do Gemini API...")
     response = client.models.generate_content(
-        model='gemini-2.0-flash',
+        model='gemini-3.5-flash',
         contents=prompt,
-        config={"response_mime_type": "application/json"}
+        config={
+                "response_mime_type": "application/json",
+                "response_schema": RaportZgloszen
+                }
     )
 
-    raport = json.loads(response.text)
+    raport = RaportZgloszen.model_validate_json(response.text)
 
 except Exception as e:
     print(f"Coś poszło nie tak podczas generowania raportu: {e}")
@@ -45,6 +56,6 @@ except Exception as e:
 
 try:
     with open("raport_zgloszen.json", "w", encoding="utf-8") as f:
-        json.dump(raport, f, ensure_ascii=False, indent=4)
+        f.write(raport.model_dump_json(indent=4, ensure_ascii=False))
 except Exception as e:
     print(f"Błąd podczas zapisu do pliku: {e}")
